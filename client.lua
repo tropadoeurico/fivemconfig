@@ -1,4 +1,4 @@
--- DESABILITAR X NA MOTO
+-- DISABLE X ON MOTORCYCLE
 
 Citizen.CreateThread(function()
     while true do
@@ -15,7 +15,7 @@ Citizen.CreateThread(function()
     end
 end)
 
--- MUDAR DE LUGAR NO CARRO COM O COMANDO /p1 /p2 /p3 /p4
+-- CHANGE SEAT IN THE CAR WITH THE COMMAND /p1 /p2 /p3 /p4
 
 lugares = {-1,0,1,2}
 
@@ -27,7 +27,7 @@ for k,v in pairs(lugares) do
     end)
 end
 
--- DESATIVAR O Q / ENCOSTAR NA PAREDE
+-- DISABLE Q / TOUCH THE WALL
 
 Citizen.CreateThread(function()
     while true do
@@ -40,7 +40,7 @@ Citizen.CreateThread(function()
     end
 end)
 
--- FIX DE CRIAÇÃO DE PERSONAGEM UM EM CIMA DO OUTRO
+-- FIX CHARACTER CREATION ON TOP OF EACH OTHER
 
 function PlayerInstancia()
     for , player in ipairs(GetActivePlayers()) do
@@ -64,7 +64,7 @@ function PlayerReturnInstancia()
     end
 end
 
--- DESATIVAR A CAMERA AFK
+-- DISABLE AFK CAMERA
 
 Citizen.CreateThread(function()
     while true do
@@ -74,7 +74,7 @@ Citizen.CreateThread(function()
     end
 end
 
--- NÃO ATIRAR AGACHADO
+-- DO NOT SHOOT FROM CROUCHING
 
 Citizen.CreateThread(function()
     while true do
@@ -110,14 +110,14 @@ Citizen.CreateThread(function()
     end
 end)
 
--- SCRIPT /TENTAR
+-- SCRIPT /TRY
 
-RegisterCommand('tentar', function(source, args)
+RegisterCommand('try', function(source, args)
     local ptr = math.random(1,2)
     if ptr == 1 then
-        msg = ' ~g~Conseguiu~s~'
+        msg = ' ~g~It achieved~s~'
     else
-        msg = ' ~r~Não conseguiu~s~'
+        msg = ' ~r~Couldn't~s~'
     end
     local text = ' ' .. msg
     for i = 1,#args do
@@ -145,14 +145,14 @@ Citizen.CreateThread(function()
     end
 end)
 
--- DESATIVAR OS SONS DEFAULT DO GTA (SIRENES, TIROS, ETC)
+-- DISABLE GTA DEFAULT SOUNDS (SIRENS, GUNSHINES, ETC)
 
 CreateThread(function() 
   StartAudioScene("CHARACTER_CHANGE_IN_SKY_SCENE");
   SetAudioFlag("PoliceScannerDisabled",true); 
 end)
 
--- NÃO POR O CAPACETE QUANDO ESTÁ NA MOTO
+-- DO NOT WEAR YOUR HELMET WHEN YOU ARE ON THE MOTORCYCLE
 
 Citizen.CreateThread(function()
   while true do
@@ -165,7 +165,7 @@ Citizen.CreateThread(function()
  end
 end) 
 
--- SCRIPT DE AGACHAR NORMAL EM VEZ DO AGACHAR DO MICHAEL
+-- NORMAL SQUAT SCRIPT INSTEAD OF MICHAEL'S SQUAT
 
 local crouched = false
 local proned = false
@@ -265,7 +265,7 @@ function ProneMovement()
 	end
 end
 
--- FINGER POINT NO B / APONTAR O DEDO
+-- FINGER POINT NO B / POINT THE FINGER
 
 local mp_pointing = false
 local keyPressed = false
@@ -375,7 +375,7 @@ Citizen.CreateThread(function()
     end
 end)
 
--- DESATIVA O TAB
+-- DISABLE TAB
 
 Citizen.CreateThread(function()
 	while true do
@@ -388,7 +388,7 @@ Citizen.CreateThread(function()
 	end
 end)
 
--- REMOVER AMBULANCIAS E NPCS MEDICOS
+-- REMOVE AMBULANCES AND MEDICAL NPCS
 
 Citizen.CreateThread(function()
 	for i = 1, 15 do
@@ -427,7 +427,7 @@ else
 end
 end)
 
--- NUNCA DESLIGAR O CARRO
+-- NEVER TURN OFF THE CAR
 
 Citizen.CreateThread(function()
     while true do
@@ -448,7 +448,7 @@ Citizen.CreateThread(function()
     end
 end)
 
--- SEM CARRINHA FORTE DO GTA
+-- NO STRONG GTA VAN
 
 Citizen.CreateThread(function()
     while true do
